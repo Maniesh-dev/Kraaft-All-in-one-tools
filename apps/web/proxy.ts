@@ -18,7 +18,7 @@ const protectedPaths = ['/dashboard', '/saved', '/profile', '/settings'];
 // Routes that should redirect to home if already authenticated
 const authPaths = ['/login', '/register'];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const refreshToken = request.cookies.get('refreshToken');
 
