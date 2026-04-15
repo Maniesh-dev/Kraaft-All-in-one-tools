@@ -29,7 +29,7 @@ export default function SearchPage() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search 250+ tools..."
+          placeholder="Search 300+ tools..."
           className="pl-10 h-12 text-base"
           autoFocus
         />

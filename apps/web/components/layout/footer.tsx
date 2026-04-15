@@ -24,7 +24,7 @@ export function Footer() {
               kraaft
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-              Your one-stop destination for 250+ free online tools. No login required.
+              Your one-stop destination for 300+ free online tools. No login required.
               Fast, private, and built for everyone.
             </p>
           </div>
@@ -64,6 +64,10 @@ export function Footer() {
             <Link href="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Terms
             </Link>
+          </div>
+
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <p>Design & Developed by <a href="https://manieshsanwal.in" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Maniesh Sanwal</a></p>
           </div>
         </div>
       </div>

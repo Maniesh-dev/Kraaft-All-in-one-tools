@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://kraaft.dev"),
   openGraph: {
-    title: "kraaft — 250+ Free Online Tools",
+    title: "kraaft — 300+ Free Online Tools",
     description:
       "Fast, free, and privacy-first browser tools for everyone. No login required.",
     type: "website",
