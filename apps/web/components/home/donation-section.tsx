@@ -22,8 +22,8 @@ const DEFAULT_AMOUNT_INDEX = 1; // ₹99 (popular)
 
 function generateUPIUrl(amount: number) {
   const pa = UPI_ID;
-  const pn = "AllInOneTools";
-  const tn = `Donation to AllInOneTools`;
+  const pn = "Kraaft";
+  const tn = `Donation to Kraaft`;
   const am = amount.toFixed(2);
   const cu = "INR";
 
@@ -115,7 +115,7 @@ export function DonationSection() {
             Support This Project
           </h2>
           <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground leading-relaxed">
-            AllInOneTools is free and always will be. If it's saved you time, consider
+            Kraaft is free and always will be. If it's saved you time, consider
             buying us a coffee to keep the servers running ☕
           </p>
         </div>

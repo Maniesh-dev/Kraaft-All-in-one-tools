@@ -1,77 +1,136 @@
-# 🛠️ All In One Tools (by Kraaft)
+# Kraaft - All In One Tools
 
-![Hero Status](https://img.shields.io/badge/Status-Active-success)
-![Free Tools](https://img.shields.io/badge/Tools-300%2B-blue)
-![Users](https://img.shields.io/badge/Users-10%2C000%2B-yellow)
+All In One Tools is a monorepo web platform for free browser-based utilities across productivity, developer, PDF, media, and everyday categories.
 
-All In One Tools is a comprehensive platform offering over 300+ free browser-based utilities for creators, developers, and marketers. From developer utilities like JSON formatters to everyday calculators and AI detection tools — everything is fast, free, and privacy-first.
+## Live Website
 
-![Hero Showcase](apps/web/public/donationQR.png) <!-- Replace with an actual screenshot later -->
+[Visit Kraaft](https://kraaft.manieshsanwal.in)
 
-## ✨ Features
+[![Kraaft Website Preview](apps/web/public/image.png)](https://kraaft.manieshsanwal.in)
 
-- **300+ Utilities**: Covering diverse categories like developer tools, image processing, productivity, and more.
-- **Privacy First**: Tools run directly in your browser. No data is stored, and no signup is required.
-- **Dynamic Interface**: Sleek, modern, and highly interactive UI using glassmorphism and smooth animations.
-- **Lightning Fast**: Built on modern architecture to ensure immediate load times and rapid execution.
+The web app is built with Next.js and a shared UI package, and currently includes:
+- Category and tool discovery (`36` categories)
+- Registry-driven tool routing (`307` tools listed)
+- Auth system (email/password + Google OAuth)
+- Saved tool outputs for authenticated users
+- Tool pinning per user
 
-## 💻 Tech Stack
+## Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (React)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Phosphor Icons](https://phosphoricons.com/)
-- **Monorepo**: Turborepo workspace
+- Next.js 16 (App Router, Turbopack in dev)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui (via shared `@workspace/ui` package)
+- Turborepo
+- MongoDB + Mongoose
+- JWT auth (access + refresh token flow)
+- Zod validation
+- Framer Motion
 
-## 🚀 Getting Started
+## Monorepo Structure
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- PNPM (recommended wrapper for monorepos)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/allinonetools.git
-   cd allinonetools
-   ```
-
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-
-3. Run the development server:
-   ```bash
-   pnpm dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## ☕ Support the Project
-
-All In One Tools is completely free and always will be. However, if the tools have saved you time or helped your workflow, please consider buying us a coffee to keep the servers running!
-
-We accept donations via **UPI**. You can easily support us from the website's donation section:
-
-- **100% Secure**: Handled natively via your device's UPI Apps (GPay, Paytm, PhonePe, etc.)
-- **Scan to Pay**: Desktop users can simply scan the QR code from the screen.
-- **UPI ID**: `kraaft@ptaxis`
-
-[Donate now on the homepage!](http://localhost:3000/#donate)
-
-## 🧩 Adding New Components (shadcn/ui)
-
-This project uses a monorepo setup for `shadcn/ui` components. To add new components to the `web` app, run:
-
-```bash
-pnpm dlx shadcn@latest add [component-name] -c apps/web
+```text
+apps/
+  web/                  # Next.js application
+packages/
+  ui/                   # Shared UI components/styles/hooks
+  eslint-config/        # Shared ESLint configs
+  typescript-config/    # Shared tsconfig presets
 ```
-This places the UI components in the `packages/ui/src/components` directory.
 
-## 📄 License
+## Prerequisites
 
-This project is open-source. Please see the [LICENSE](LICENSE) file for details.
+- Node.js `>=20`
+- npm (project uses npm workspaces and Turborepo)
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Create `apps/web/.env.local`:
+   ```env
+   MONGODB_URI=
+
+   ACCESS_TOKEN_SECRET=
+   REFRESH_TOKEN_SECRET=
+   ACCESS_TOKEN_EXPIRES_IN=15m
+   REFRESH_TOKEN_EXPIRES_IN=7d
+
+   SMTP_HOST=
+   SMTP_PORT=587
+   SMTP_USER=
+   SMTP_PASS=
+   EMAIL_FROM=
+
+   NEXT_PUBLIC_APP_URL=http://localhost:3000
+   NEXT_PUBLIC_GOOGLE_CLIENT_ID=
+   ```
+
+3. Start development:
+   ```bash
+   npm run dev
+   ```
+
+4. Open `http://localhost:3000`.
+
+## Scripts (Root)
+
+- `npm run dev` - Run all workspace dev tasks through Turbo
+- `npm run build` - Production build
+- `npm run lint` - Lint all workspaces
+- `npm run typecheck` - Type-check all workspaces
+- `npm run format` - Format all workspaces
+
+## App Highlights
+
+- Dynamic category page: `apps/web/app/[category]/page.tsx`
+- Dynamic tool page: `apps/web/app/[category]/[tool]/page.tsx`
+- Tool registry: `apps/web/lib/tools-registry.ts`
+- Category registry: `apps/web/lib/categories.ts`
+- Search index logic: `apps/web/lib/search.ts`
+- Live example tool: `apps/web/components/tools/pdf/pdf-merger-tool.tsx`
+
+## Authentication and Data
+
+Implemented API routes include:
+- `/api/auth/register`, `/api/auth/login`, `/api/auth/google`
+- `/api/auth/verify`, `/api/auth/refresh`, `/api/auth/logout`, `/api/auth/me`
+- `/api/saved-data`
+- `/api/user/pinned`
+
+Auth supports:
+- Local registration with email verification
+- Google sign-in
+- JWT access tokens + refresh token cookie flow
+
+## Adding a New Live Tool
+
+1. Add tool metadata to `apps/web/lib/tools-registry.ts` (`status: "live"`).
+2. Create tool component under `apps/web/components/tools/<category>/`.
+3. Wire rendering logic in `apps/web/app/[category]/[tool]/page.tsx`.
+4. If persistence is needed, integrate with `/api/saved-data`.
+
+## shadcn/ui Usage
+
+For app-level components:
+```bash
+npx shadcn@latest add <component-name> -c apps/web
+```
+
+For shared UI package updates, add/edit components in `packages/ui/src/components`.
+
+## Security Notes
+
+- Never commit real secrets in `.env.local`.
+- Rotate credentials immediately if any secret is exposed.
+- Prefer keeping `.env.local` local-only and using deployment environment variables for production.
+
+## Support
+
+If you want to support the project, use the donation section on the home page (`/#donate`).
+
+UPI ID used in-app: `kraaft@ptaxis`.

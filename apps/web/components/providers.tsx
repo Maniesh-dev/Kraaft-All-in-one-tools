@@ -37,6 +37,46 @@ function ThemeHotkey() {
   return null;
 }
 
+function TabVisibility() {
+  React.useEffect(() => {
+    let originalTitle = document.title;
+    let originalFavicon = "/icon.png";
+
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        // Only update originalTitle if it's not the "missing you" title
+        if (document.title !== "Kraaft - We missing you!") {
+          originalTitle = document.title;
+        }
+        document.title = "Kraaft - We missing you!";
+
+        let link = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+        if (link) {
+          originalFavicon = link.getAttribute("href") || "/icon.png";
+        } else {
+          link = document.createElement("link");
+          link.rel = "icon";
+          document.head.appendChild(link);
+        }
+        link.type = "image/svg+xml";
+        link.href = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😢</text></svg>";
+      } else {
+        document.title = originalTitle;
+        let link = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+        if (link) {
+          link.type = "image/png";
+          link.href = originalFavicon;
+        }
+      }
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  return null;
+}
+
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <NextThemesProvider
@@ -49,6 +89,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <PinnedToolsProvider>
           <TooltipProvider>
             <ThemeHotkey />
+            <TabVisibility />
             {children}
             <Toaster richColors position="top-right" />
           </TooltipProvider>
