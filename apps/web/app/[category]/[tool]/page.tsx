@@ -192,6 +192,7 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "pdf-rotator": PdfRotatorTool,
     "pdf-form-filler": PdfFormFillerTool,
     "pdf-to-image": PdfToImageTool,
+    "pdf-compressor": PdfCompressorTool,
   },
   "data-file": {
     "csv-to-json": CsvToJsonTool,
