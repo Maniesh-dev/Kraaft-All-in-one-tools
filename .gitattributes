@@ -1,0 +1,2 @@
+# Mark vendored/generated files so GitHub excludes them from language stats
+apps/web/public/pdf.worker.min.mjs linguist-vendored
