@@ -14,31 +14,31 @@ export interface Tool {
 
 export const tools: Tool[] = [
   // ─── Clock & Time Tools ──────────────────────────────────────
-  { slug: "world-clock", name: "World Clock", description: "Current time in any city around the world", category: "clock-time", tags: ["time", "timezone", "city", "clock"], isMostUsed: true, status: "coming-soon" },
+  { slug: "world-clock", name: "World Clock", description: "Current time in any city around the world", category: "clock-time", tags: ["time", "timezone", "city", "clock"], isMostUsed: true, status: "live" },
   { slug: "stopwatch", name: "Online Stopwatch", description: "Stopwatch with lap timer functionality", category: "clock-time", tags: ["stopwatch", "lap", "timer"], status: "live" },
   { slug: "countdown-timer", name: "Countdown Timer", description: "Set a countdown and share a link", category: "clock-time", tags: ["countdown", "timer", "share"], status: "live" },
   { slug: "alarm-clock", name: "Alarm Clock", description: "Browser-based alarm clock", category: "clock-time", tags: ["alarm", "clock", "wake"], status: "live" },
-  { slug: "timezone-planner", name: "Timezone Planner", description: "Plan meetings across multiple timezones", category: "clock-time", tags: ["meeting", "timezone", "planner"], status: "coming-soon" },
-  { slug: "sunrise-sunset", name: "Sunrise & Sunset", description: "Sunrise and sunset times by city", category: "clock-time", tags: ["sunrise", "sunset", "city", "daylight"], status: "coming-soon" },
-  { slug: "time-elapsed", name: "Time Elapsed", description: "Calculate how much time has passed since a date", category: "clock-time", tags: ["time", "elapsed", "date", "since"], status: "coming-soon" },
+  { slug: "timezone-planner", name: "Timezone Planner", description: "Plan meetings across multiple timezones", category: "clock-time", tags: ["meeting", "timezone", "planner"], status: "live" },
+  { slug: "sunrise-sunset", name: "Sunrise & Sunset", description: "Sunrise and sunset times by city", category: "clock-time", tags: ["sunrise", "sunset", "city", "daylight"], status: "live" },
+  { slug: "time-elapsed", name: "Time Elapsed", description: "Calculate how much time has passed since a date", category: "clock-time", tags: ["time", "elapsed", "date", "since"], status: "live" },
 
   // ─── Weather Tools ──────────────────────────────────────────
-  { slug: "current-weather", name: "Current Weather", description: "Check the current weather by location", category: "weather", tags: ["weather", "temperature", "location"], status: "coming-soon" },
-  { slug: "weather-forecast", name: "7-Day Forecast", description: "Get a 7-day weather forecast", category: "weather", tags: ["weather", "forecast", "week"], status: "coming-soon" },
-  { slug: "air-quality", name: "Air Quality Index", description: "Check the air quality index (AQI)", category: "weather", tags: ["air", "quality", "aqi", "pollution"], status: "coming-soon" },
-  { slug: "uv-index", name: "UV Index Checker", description: "Check the current UV index", category: "weather", tags: ["uv", "sun", "index"], status: "coming-soon" },
-  { slug: "rain-humidity", name: "Rain & Humidity", description: "Track rain and humidity levels", category: "weather", tags: ["rain", "humidity", "moisture"], status: "coming-soon" },
-  { slug: "wind-speed", name: "Wind Speed & Direction", description: "Check wind speed and direction", category: "weather", tags: ["wind", "speed", "direction"], status: "coming-soon" },
-  { slug: "weather-widget", name: "Weather Widget Generator", description: "Generate an embeddable weather widget", category: "weather", tags: ["weather", "widget", "embed"], status: "coming-soon" },
+  { slug: "current-weather", name: "Current Weather", description: "Check the current weather by location", category: "weather", tags: ["weather", "temperature", "location"], status: "live" },
+  { slug: "weather-forecast", name: "7-Day Forecast", description: "Get a 7-day weather forecast", category: "weather", tags: ["weather", "forecast", "week"], status: "live" },
+  { slug: "air-quality", name: "Air Quality Index", description: "Check the air quality index (AQI)", category: "weather", tags: ["air", "quality", "aqi", "pollution"], status: "live" },
+  { slug: "uv-index", name: "UV Index Checker", description: "Check the current UV index", category: "weather", tags: ["uv", "sun", "index"], status: "live" },
+  { slug: "rain-humidity", name: "Rain & Humidity", description: "Track rain and humidity levels", category: "weather", tags: ["rain", "humidity", "moisture"], status: "live" },
+  { slug: "wind-speed", name: "Wind Speed & Direction", description: "Check wind speed and direction", category: "weather", tags: ["wind", "speed", "direction"], status: "live" },
+  { slug: "weather-widget", name: "Weather Widget Generator", description: "Generate an embeddable weather widget", category: "weather", tags: ["weather", "widget", "embed"], status: "live" },
 
   // ─── To-Do & Task Tools ──────────────────────────────────────
-  { slug: "todo-list", name: "Simple To-Do List", description: "No-login to-do list for quick tasks", category: "todo-task", tags: ["todo", "list", "tasks"], status: "coming-soon" },
-  { slug: "daily-planner", name: "Daily Planner", description: "Schedule builder for your day", category: "todo-task", tags: ["planner", "schedule", "daily"], status: "coming-soon" },
-  { slug: "shared-checklist", name: "Shared Checklist", description: "Create and share a checklist via link", category: "todo-task", tags: ["checklist", "share", "link"], status: "coming-soon" },
-  { slug: "grocery-list", name: "Grocery List", description: "Grocery and shopping list maker", category: "todo-task", tags: ["grocery", "shopping", "list"], status: "coming-soon" },
-  { slug: "recurring-task", name: "Recurring Tasks", description: "Set up recurring tasks and reminders", category: "todo-task", tags: ["recurring", "reminder", "task"], status: "coming-soon" },
-  { slug: "kanban-board", name: "Kanban Board", description: "Simple kanban board with no signup", category: "todo-task", tags: ["kanban", "board", "project"], status: "coming-soon" },
-  { slug: "priority-matrix", name: "Priority Matrix", description: "Eisenhower priority matrix for task management", category: "todo-task", tags: ["priority", "eisenhower", "matrix"], status: "coming-soon" },
+  { slug: "todo-list", name: "Simple To-Do List", description: "No-login to-do list for quick tasks", category: "todo-task", tags: ["todo", "list", "tasks"], status: "live" },
+  { slug: "daily-planner", name: "Daily Planner", description: "Schedule builder for your day", category: "todo-task", tags: ["planner", "schedule", "daily"], status: "live" },
+  { slug: "shared-checklist", name: "Shared Checklist", description: "Create and share a checklist via link", category: "todo-task", tags: ["checklist", "share", "link"], status: "live" },
+  { slug: "grocery-list", name: "Grocery List", description: "Grocery and shopping list maker", category: "todo-task", tags: ["grocery", "shopping", "list"], status: "live" },
+  { slug: "recurring-task", name: "Recurring Tasks", description: "Set up recurring tasks and reminders", category: "todo-task", tags: ["recurring", "reminder", "task"], status: "live" },
+  { slug: "kanban-board", name: "Kanban Board", description: "Simple kanban board with no signup", category: "todo-task", tags: ["kanban", "board", "project"], status: "live" },
+  { slug: "priority-matrix", name: "Priority Matrix", description: "Eisenhower priority matrix for task management", category: "todo-task", tags: ["priority", "eisenhower", "matrix"], status: "live" },
 
   // ─── Calendar & Date Tools ──────────────────────────────────
   { slug: "days-until-since", name: "Days Until / Since", description: "Calculate days until or since a date", category: "calendar-date", tags: ["days", "until", "since", "date"], status: "live" },
@@ -117,15 +117,15 @@ export const tools: Tool[] = [
   // ─── Text & Writing Tools ──────────────────────────────────────
   { slug: "word-counter", name: "Word & Character Counter", description: "Count words, characters, sentences and paragraphs", category: "text-writing", tags: ["word", "character", "counter", "count"], status: "live" },
   { slug: "case-converter", name: "Case Converter", description: "Convert text between upper, lower, title and other cases", category: "text-writing", tags: ["case", "upper", "lower", "title", "convert"], status: "live" },
-  { slug: "text-diff", name: "Text Diff Checker", description: "Compare two texts and see the differences", category: "text-writing", tags: ["diff", "compare", "text", "difference"], status: "coming-soon" },
+  { slug: "text-diff", name: "Text Diff Checker", description: "Compare two texts and see the differences", category: "text-writing", tags: ["diff", "compare", "text", "difference"], status: "live" },
   { slug: "lorem-ipsum", name: "Lorem Ipsum Generator", description: "Generate placeholder lorem ipsum text", category: "text-writing", tags: ["lorem", "ipsum", "placeholder", "text"], status: "live" },
   { slug: "duplicate-remover", name: "Duplicate Line Remover", description: "Remove duplicate lines from text", category: "text-writing", tags: ["duplicate", "remove", "line", "unique"], status: "live" },
   { slug: "text-to-slug", name: "Text to URL Slug", description: "Convert text to URL-friendly slugs", category: "text-writing", tags: ["slug", "url", "text", "convert"], status: "live" },
-  { slug: "fancy-text", name: "Fancy Text Styler", description: "Generate fancy and stylish text fonts", category: "text-writing", tags: ["fancy", "text", "font", "style", "unicode"], status: "coming-soon" },
-  { slug: "readability-scorer", name: "Readability Scorer", description: "Check the readability score of your text", category: "text-writing", tags: ["readability", "score", "flesch", "grade"], status: "coming-soon" },
+  { slug: "fancy-text", name: "Fancy Text Styler", description: "Generate fancy and stylish text fonts", category: "text-writing", tags: ["fancy", "text", "font", "style", "unicode"], status: "live" },
+  { slug: "readability-scorer", name: "Readability Scorer", description: "Check the readability score of your text", category: "text-writing", tags: ["readability", "score", "flesch", "grade"], status: "live" },
   { slug: "text-sorter", name: "Text Sorter", description: "Sort text lines alphabetically or reverse", category: "text-writing", tags: ["sort", "text", "alphabetical", "reverse"], status: "live" },
   { slug: "find-replace", name: "Find & Replace", description: "Find and replace text with regex support", category: "text-writing", tags: ["find", "replace", "regex", "text"], status: "live" },
-  { slug: "line-numbers", name: "Line Number Adder", description: "Add or remove line numbers from text", category: "text-writing", tags: ["line", "number", "add", "remove"], status: "coming-soon" },
+  { slug: "line-numbers", name: "Line Number Adder", description: "Add or remove line numbers from text", category: "text-writing", tags: ["line", "number", "add", "remove"], status: "live" },
   { slug: "whitespace-cleaner", name: "Whitespace Cleaner", description: "Clean up extra whitespace from text", category: "text-writing", tags: ["whitespace", "clean", "space", "trim"], status: "live" },
 
   // ─── Developer Tools ──────────────────────────────────────────
@@ -188,19 +188,19 @@ export const tools: Tool[] = [
   { slug: "my-ip", name: "My IP Address", description: "Find your public IP address", category: "network-web", tags: ["ip", "address", "my", "public"], status: "live" },
 
   // ─── Converters & Calculators ──────────────────────────────
-  { slug: "unit-converter", name: "Unit Converter", description: "Convert length, weight, temperature and more", category: "converters-calculators", tags: ["unit", "convert", "length", "weight", "temperature"], status: "coming-soon" },
-  { slug: "currency-converter", name: "Currency Converter", description: "Convert currencies with live exchange rates", category: "converters-calculators", tags: ["currency", "convert", "exchange", "rate"], status: "coming-soon" },
+  { slug: "unit-converter", name: "Unit Converter", description: "Convert length, weight, temperature and more", category: "converters-calculators", tags: ["unit", "convert", "length", "weight", "temperature"], status: "live" },
+  { slug: "currency-converter", name: "Currency Converter", description: "Convert currencies with live exchange rates", category: "converters-calculators", tags: ["currency", "convert", "exchange", "rate"], status: "live" },
   { slug: "number-base-converter", name: "Number Base Converter", description: "Convert between binary, hex, octal and decimal", category: "converters-calculators", tags: ["binary", "hex", "octal", "decimal", "convert"], status: "live" },
   { slug: "age-calculator", name: "Age Calculator", description: "Calculate your exact age in years, months, days", category: "converters-calculators", tags: ["age", "calculator", "birthday"], status: "live" },
   { slug: "date-difference", name: "Date Difference Calculator", description: "Calculate the difference between two dates", category: "converters-calculators", tags: ["date", "difference", "between", "days"], status: "live" },
-  { slug: "timezone-converter", name: "Timezone Converter", description: "Convert times between timezones", category: "converters-calculators", tags: ["timezone", "convert", "time"], status: "coming-soon" },
-  { slug: "bmi-calculator", name: "BMI Calculator", description: "Calculate your Body Mass Index", category: "converters-calculators", tags: ["bmi", "body", "mass", "index", "health"], status: "coming-soon" },
-  { slug: "calorie-calculator", name: "Calorie Calculator", description: "Calculate daily calorie needs", category: "converters-calculators", tags: ["calorie", "calculator", "diet", "nutrition"], status: "coming-soon" },
+  { slug: "timezone-converter", name: "Timezone Converter", description: "Convert times between timezones", category: "converters-calculators", tags: ["timezone", "convert", "time"], status: "live" },
+  { slug: "bmi-calculator", name: "BMI Calculator", description: "Calculate your Body Mass Index", category: "converters-calculators", tags: ["bmi", "body", "mass", "index", "health"], status: "live" },
+  { slug: "calorie-calculator", name: "Calorie Calculator", description: "Calculate daily calorie needs", category: "converters-calculators", tags: ["calorie", "calculator", "diet", "nutrition"], status: "live" },
   { slug: "roman-numeral", name: "Roman Numeral Converter", description: "Convert between Roman and Arabic numerals", category: "converters-calculators", tags: ["roman", "numeral", "convert"], status: "live" },
   { slug: "fraction-simplifier", name: "Fraction Simplifier", description: "Simplify fractions to their lowest terms", category: "converters-calculators", tags: ["fraction", "simplify", "math"], status: "live" },
   { slug: "percentage-calculator", name: "Percentage Calculator", description: "Calculate percentages quickly", category: "converters-calculators", tags: ["percentage", "calculator", "math"], status: "live" },
-  { slug: "scientific-calculator", name: "Scientific Calculator", description: "Full-featured scientific calculator", category: "converters-calculators", tags: ["scientific", "calculator", "math", "advanced"], status: "coming-soon" },
-  { slug: "statistics-calculator", name: "Statistics Calculator", description: "Calculate mean, median, mode and standard deviation", category: "converters-calculators", tags: ["statistics", "mean", "median", "mode", "std"], status: "coming-soon" },
+  { slug: "scientific-calculator", name: "Scientific Calculator", description: "Full-featured scientific calculator", category: "converters-calculators", tags: ["scientific", "calculator", "math", "advanced"], status: "live" },
+  { slug: "statistics-calculator", name: "Statistics Calculator", description: "Calculate mean, median, mode and standard deviation", category: "converters-calculators", tags: ["statistics", "mean", "median", "mode", "std"], status: "live" },
 
   // ─── Finance & Business ──────────────────────────────────────
   { slug: "gst-calculator", name: "GST / VAT Calculator", description: "Calculate GST or VAT for any amount", category: "finance-business", tags: ["gst", "vat", "tax", "calculator"], status: "live" },

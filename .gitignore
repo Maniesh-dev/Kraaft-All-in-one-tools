@@ -20,8 +20,13 @@ coverage
 # Turbo
 .turbo
 
+#rules
+.rules/
+.windsurf/
+
 #agent
 .agent/
+.agents/
 
 # Vercel
 .vercel

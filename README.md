@@ -10,7 +10,7 @@ All In One Tools is a monorepo web platform for free browser-based utilities acr
 
 The web app is built with Next.js and a shared UI package, and currently includes:
 - Category and tool discovery (`36` categories)
-- Registry-driven tool routing (`307` tools listed, `60+` live and fully functional)
+- Registry-driven tool routing (`307` tools listed, `95+` live and fully functional)
 - Auth system (email/password + Google OAuth)
 - Saved tool outputs for authenticated users
 - Tool pinning per user
@@ -96,6 +96,12 @@ packages/
 
 ## App Highlights
 
+- **Active Categories Built!**
+  - **Clock & Time**: World Clocks, Timers, Sunrise/Sunset calculators.
+  - **Weather**: Forecasts, Air Quality, Wind Speed Compasses, Widget Generators.
+  - **To-Do & Tasks**: Smart local-storage To-Do lists, Grocery planners, Kanban boards, Priority Matrices.
+  - **Text & Writing**: Diff Checkers, Base Converters, Fancy Styling, Flesch-Kincaid Readability Analyzers.
+  - **Converters & Calculators**: Live global Currency Exchange fetching, Unit Mapping, Statistics, Mifflin-St Jeor TDEE parsing.
 - Dynamic category page: `apps/web/app/[category]/page.tsx`
 - Dynamic tool page: `apps/web/app/[category]/[tool]/page.tsx`
 - Tool registry: `apps/web/lib/tools-registry.ts`
