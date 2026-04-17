@@ -110,6 +110,13 @@ import { YoutubeTesterTool } from "@/components/tools/social-media/youtube-teste
 import { EmojiPickerTool } from "@/components/tools/social-media/emoji-picker-tool";
 
 import { ImageToBase64Tool } from "@/components/tools/image/image-to-base64-tool";
+import { ImageFormatConverterTool } from "@/components/tools/image/image-format-converter-tool";
+import { ImageCompressorTool } from "@/components/tools/image/image-compressor-tool";
+import { ImageResizerTool } from "@/components/tools/image/image-resizer-tool";
+import { WatermarkAdderTool } from "@/components/tools/image/watermark-adder-tool";
+import { ColorPickerImageTool } from "@/components/tools/image/color-picker-image-tool";
+import { PlaceholderImageTool } from "@/components/tools/design/placeholder-image-tool";
+import { SocialImageResizerTool } from "@/components/tools/social-media/social-image-resizer-tool";
 import { QrCodeGeneratorTool } from "@/components/tools/link-url/qr-code-generator-tool";
 import { UrlEncodeDecodeTool } from "@/components/tools/link-url/url-encode-decode-tool";
 import { OnlineNotepadTool } from "@/components/tools/general/online-notepad-tool";
@@ -222,6 +229,7 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "gradient-generator": CssGradientTool,
     "border-radius-generator": BorderRadiusTool,
     "color-palette": ColorPaletteTool,
+    "placeholder-image": PlaceholderImageTool,
   },
   "clock-time": {
     "stopwatch": StopwatchTool,
@@ -267,9 +275,15 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "youtube-tester": YoutubeTesterTool,
     "emoji-picker": EmojiPickerTool,
     "instagram-formatter": InstagramFormatterTool,
+    "social-image-resizer": SocialImageResizerTool,
   },
   "image": {
     "image-to-base64": ImageToBase64Tool,
+    "image-format-converter": ImageFormatConverterTool,
+    "image-compressor": ImageCompressorTool,
+    "image-resizer": ImageResizerTool,
+    "watermark-adder": WatermarkAdderTool,
+    "color-picker-image": ColorPickerImageTool,
   },
   "general-productivity": {
     "online-notepad": OnlineNotepadTool,

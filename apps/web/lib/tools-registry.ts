@@ -60,13 +60,13 @@ export const tools: Tool[] = [
 
   // ─── Image Tools ──────────────────────────────────────────
   { slug: "image-to-pdf", name: "Image to PDF", description: "Convert images to PDF documents", category: "image", tags: ["image", "pdf", "convert"], isMostUsed: true, status: "coming-soon" },
-  { slug: "image-compressor", name: "Image Compressor", description: "Compress images without losing quality", category: "image", tags: ["image", "compress", "optimize"], status: "coming-soon" },
-  { slug: "image-resizer", name: "Image Resizer & Cropper", description: "Resize and crop images easily", category: "image", tags: ["image", "resize", "crop"], status: "coming-soon" },
+  { slug: "image-compressor", name: "Image Compressor", description: "Compress images without losing quality", category: "image", tags: ["image", "compress", "optimize"], status: "live" },
+  { slug: "image-resizer", name: "Image Resizer & Cropper", description: "Resize and crop images easily", category: "image", tags: ["image", "resize", "crop"], status: "live" },
   { slug: "background-remover", name: "Background Remover", description: "Remove background from any image", category: "image", tags: ["background", "remove", "image"], status: "coming-soon" },
-  { slug: "image-format-converter", name: "Format Converter", description: "Convert between PNG, JPG, WebP, AVIF formats", category: "image", tags: ["image", "format", "convert", "png", "jpg", "webp"], status: "coming-soon" },
+  { slug: "image-format-converter", name: "Format Converter", description: "Convert between PNG, JPG, WebP, AVIF formats", category: "image", tags: ["image", "format", "convert", "png", "jpg", "webp"], status: "live" },
   { slug: "image-to-base64", name: "Image to Base64", description: "Convert images to Base64 strings", category: "image", tags: ["image", "base64", "encode"], status: "live" },
-  { slug: "watermark-adder", name: "Watermark Adder", description: "Add watermarks to your images", category: "image", tags: ["watermark", "image", "protect"], status: "coming-soon" },
-  { slug: "color-picker-image", name: "Color Picker from Image", description: "Pick colors from any image", category: "image", tags: ["color", "picker", "image", "eyedropper"], status: "coming-soon" },
+  { slug: "watermark-adder", name: "Watermark Adder", description: "Add watermarks to your images", category: "image", tags: ["watermark", "image", "protect"], status: "live" },
+  { slug: "color-picker-image", name: "Color Picker from Image", description: "Pick colors from any image", category: "image", tags: ["color", "picker", "image", "eyedropper"], status: "live" },
   { slug: "bulk-image-renamer", name: "Bulk Image Renamer", description: "Rename multiple images at once", category: "image", tags: ["bulk", "rename", "image"], status: "coming-soon" },
   { slug: "exif-viewer", name: "EXIF Data Viewer", description: "View and remove EXIF metadata from images", category: "image", tags: ["exif", "metadata", "image", "privacy"], status: "coming-soon" },
   { slug: "reverse-image-search", name: "Reverse Image Search", description: "Find the source of any image", category: "image", tags: ["reverse", "image", "search"], status: "coming-soon" },
@@ -163,7 +163,7 @@ export const tools: Tool[] = [
   { slug: "border-radius-generator", name: "Border Radius Generator", description: "Generate CSS border radius visually", category: "design-color", tags: ["border", "radius", "css", "generator"], status: "live" },
   { slug: "font-pairing", name: "Font Pairing Suggester", description: "Get font pairing suggestions for your designs", category: "design-color", tags: ["font", "pairing", "typography", "suggest"], status: "coming-soon" },
   { slug: "svg-optimizer", name: "SVG Optimizer", description: "Optimize and minify SVG files", category: "design-color", tags: ["svg", "optimize", "minify"], status: "coming-soon" },
-  { slug: "placeholder-image", name: "Placeholder Image Generator", description: "Generate placeholder images with custom sizes", category: "design-color", tags: ["placeholder", "image", "generator"], status: "coming-soon" },
+  { slug: "placeholder-image", name: "Placeholder Image Generator", description: "Generate placeholder images with custom sizes", category: "design-color", tags: ["placeholder", "image", "generator"], status: "live" },
   { slug: "device-mockup", name: "Device Frame Mockup", description: "Place screenshots in device frame mockups", category: "design-color", tags: ["device", "mockup", "frame", "screenshot"], status: "coming-soon" },
   { slug: "app-screenshot", name: "App Store Screenshot", description: "Generate app store screenshots", category: "design-color", tags: ["app", "store", "screenshot", "generator"], status: "coming-soon" },
 
@@ -229,7 +229,7 @@ export const tools: Tool[] = [
 
   // ─── Social Media Tools ──────────────────────────────────────
   { slug: "hashtag-generator", name: "Hashtag Generator", description: "Generate relevant hashtags for your posts", category: "social-media", tags: ["hashtag", "social", "media", "generate"], status: "live" },
-  { slug: "social-image-resizer", name: "Social Image Resizer", description: "Resize images for all social platforms", category: "social-media", tags: ["social", "image", "resize", "platform"], status: "coming-soon" },
+  { slug: "social-image-resizer", name: "Social Image Resizer", description: "Resize images for all social platforms", category: "social-media", tags: ["social", "image", "resize", "platform"], status: "live" },
   { slug: "bio-link-builder", name: "Bio Link Builder", description: "Build a Linktree-style bio link page", category: "social-media", tags: ["bio", "link", "linktree", "builder"], status: "coming-soon" },
   { slug: "twitter-counter", name: "Twitter Character Counter", description: "Count characters for Twitter/X posts", category: "social-media", tags: ["twitter", "character", "counter", "x"], status: "live" },
   { slug: "instagram-formatter", name: "Instagram Caption Formatter", description: "Format Instagram captions with line breaks", category: "social-media", tags: ["instagram", "caption", "format", "line break"], status: "live" },
