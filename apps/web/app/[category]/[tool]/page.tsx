@@ -46,6 +46,12 @@ import { NumberBaseConverterTool } from "@/components/tools/converters/number-ba
 import { AgeCalculatorTool } from "@/components/tools/converters/age-calculator-tool";
 import { PercentageCalculatorTool } from "@/components/tools/converters/percentage-calculator-tool";
 import { RomanNumeralTool } from "@/components/tools/converters/roman-numeral-tool";
+import { UnitConverterTool } from "@/components/tools/converters/unit-converter-tool";
+import { CurrencyConverterTool } from "@/components/tools/converters/currency-converter-tool";
+import { TimezoneConverterTool } from "@/components/tools/converters/timezone-converter-tool";
+import { CalorieCalculatorTool } from "@/components/tools/converters/calorie-calculator-tool";
+import { ScientificCalculatorTool } from "@/components/tools/converters/scientific-calculator-tool";
+import { StatisticsCalculatorTool } from "@/components/tools/converters/statistics-calculator-tool";
 
 import { PasswordGeneratorTool } from "@/components/tools/security/password-generator-tool";
 import { PasswordStrengthTool } from "@/components/tools/security/password-strength-tool";
@@ -63,6 +69,32 @@ import { PinToolPrompt } from "@/components/tools/pin-tool-prompt";
 import { StopwatchTool } from "@/components/tools/clock/stopwatch-tool";
 import { CountdownTimerTool } from "@/components/tools/clock/countdown-timer-tool";
 import { AlarmClockTool } from "@/components/tools/clock/alarm-clock-tool";
+import { WorldClockTool } from "@/components/tools/clock/world-clock-tool";
+import { TimezonePlannerTool } from "@/components/tools/clock/timezone-planner-tool";
+import { SunriseSunsetTool } from "@/components/tools/clock/sunrise-sunset-tool";
+import { TimeElapsedTool } from "@/components/tools/clock/time-elapsed-tool";
+
+import { CurrentWeatherTool } from "@/components/tools/weather/current-weather-tool";
+import { WeatherForecastTool } from "@/components/tools/weather/weather-forecast-tool";
+import { AirQualityTool } from "@/components/tools/weather/air-quality-tool";
+import { UvIndexTool } from "@/components/tools/weather/uv-index-tool";
+import { RainHumidityTool } from "@/components/tools/weather/rain-humidity-tool";
+import { WindSpeedTool } from "@/components/tools/weather/wind-speed-tool";
+import { WeatherWidgetTool } from "@/components/tools/weather/weather-widget-tool";
+
+import { TodoListTool } from "@/components/tools/todo-task/todo-list-tool";
+import { DailyPlannerTool } from "@/components/tools/todo-task/daily-planner-tool";
+import { SharedChecklistTool } from "@/components/tools/todo-task/shared-checklist-tool";
+import { GroceryListTool } from "@/components/tools/todo-task/grocery-list-tool";
+import { RecurringTaskTool } from "@/components/tools/todo-task/recurring-task-tool";
+import { KanbanBoardTool } from "@/components/tools/todo-task/kanban-board-tool";
+import { PriorityMatrixTool } from "@/components/tools/todo-task/priority-matrix-tool";
+
+import { TextDiffTool } from "@/components/tools/text-writing/text-diff-tool";
+import { FancyTextTool } from "@/components/tools/text-writing/fancy-text-tool";
+import { ReadabilityScorerTool } from "@/components/tools/text-writing/readability-scorer-tool";
+import { LineNumbersTool } from "@/components/tools/text-writing/line-numbers-tool";
+
 
 import { DaysUntilSinceTool } from "@/components/tools/calendar/days-until-since-tool";
 import { DateAddSubtractTool } from "@/components/tools/calendar/date-add-subtract-tool";
@@ -126,7 +158,7 @@ import { FakeDataTool } from "@/components/tools/security/fake-data-tool";
 
 // Mapping of category -> tool slug -> component
 const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
-  pdf: {
+  "pdf": {
     "pdf-merger": PdfMergerTool,
     "pdf-splitter": PdfSplitterTool,
     "pdf-rotator": PdfRotatorTool,
@@ -149,10 +181,10 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "find-replace": FindReplaceTool,
     "whitespace-cleaner": WhitespaceCleanerTool,
   },
-  developer: {
+  "developer": {
     "json-formatter": JsonFormatterTool,
     "base64-encoder": Base64EncoderTool,
-    "html-entity-encode": HtmlEntityEncoderTool,
+    "html-entity-encoder": HtmlEntityEncoderTool,
     "regex-tester": RegexTesterTool,
     "markdown-to-html": MarkdownToHtmlTool,
     "uuid-generator": UuidGeneratorTool,
@@ -160,6 +192,13 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "jwt-decoder": JwtDecoderTool,
   },
   "converters-calculators": {
+    "unit-converter": UnitConverterTool,
+    "currency-converter": CurrencyConverterTool,
+    "timezone-converter": TimezoneConverterTool,
+    "bmi-calculator": BmiCalculatorTool,
+    "calorie-calculator": CalorieCalculatorTool,
+    "scientific-calculator": ScientificCalculatorTool,
+    "statistics-calculator": StatisticsCalculatorTool,
     "number-base-converter": NumberBaseConverterTool,
     "age-calculator": AgeCalculatorTool,
     "percentage-calculator": PercentageCalculatorTool,
@@ -188,7 +227,30 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "stopwatch": StopwatchTool,
     "countdown-timer": CountdownTimerTool,
     "alarm-clock": AlarmClockTool,
+    "world-clock": WorldClockTool,
+    "timezone-planner": TimezonePlannerTool,
+    "sunrise-sunset": SunriseSunsetTool,
+    "time-elapsed": TimeElapsedTool,
   },
+  "weather": {
+    "current-weather": CurrentWeatherTool,
+    "weather-forecast": WeatherForecastTool,
+    "air-quality": AirQualityTool,
+    "uv-index": UvIndexTool,
+    "rain-humidity": RainHumidityTool,
+    "wind-speed": WindSpeedTool,
+    "weather-widget": WeatherWidgetTool,
+  },
+  "todo-task": {
+    "todo-list": TodoListTool,
+    "daily-planner": DailyPlannerTool,
+    "shared-checklist": SharedChecklistTool,
+    "grocery-list": GroceryListTool,
+    "recurring-task": RecurringTaskTool,
+    "kanban-board": KanbanBoardTool,
+    "priority-matrix": PriorityMatrixTool,
+  },
+
   "calendar-date": {
     "days-until-since": DaysUntilSinceTool,
     "date-add-subtract": DateAddSubtractTool,
@@ -222,7 +284,7 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "fd-calculator": FdRdCalculatorTool,
   },
   "health-fitness": {
-    "bmi-calculator": BmiCalculatorTool,
+    "bmi-ideal-weight": BmiCalculatorTool,
     "water-intake": WaterIntakeTool,
     "one-rep-max": OneRepMaxTool,
     "body-fat": BodyFatTool,
