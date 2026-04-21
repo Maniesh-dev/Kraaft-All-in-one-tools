@@ -23,6 +23,21 @@ type ShortLinkResult = {
   savedToAccount: boolean;
 };
 
+async function parseApiResponse(response: Response) {
+  const raw = await response.text();
+  if (!raw.trim()) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(raw) as Record<string, unknown>;
+  } catch {
+    return {
+      error: response.ok ? "Unexpected server response" : "Server returned an invalid response",
+    };
+  }
+}
+
 export function UrlShortenerTool() {
   const { user, authFetch } = useAuth();
   const [url, setUrl] = React.useState("");
@@ -80,10 +95,14 @@ export function UrlShortenerTool() {
         }),
       });
 
-      const data = await res.json();
+      const data = await parseApiResponse(res);
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to shorten URL");
+        throw new Error(
+          (data && typeof data.error === "string" && data.error) ||
+            (data && typeof data.message === "string" && data.message) ||
+            "Failed to shorten URL"
+        );
       }
 
       setResult(data as ShortLinkResult);
