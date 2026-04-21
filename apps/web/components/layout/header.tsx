@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-100 glass relative w-full border-b border-border/40">
+      <header className="sticky top-0 z-50 glass relative w-full border-b border-border/40">
         {/* Absolute Expanding Mobile Search */}
         {mobileSearchOpen && (
           <div className="absolute inset-0 z-[60] flex items-center bg-background px-4 md:hidden shadow-sm animate-in fade-in slide-in-from-top-2">
@@ -164,10 +164,7 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 overflow-y-auto">
-                <SheetTitle className="p-4 ">Menu</SheetTitle>
-                <div className="px-4 mb-4">
-                  <InlineSearch className="w-full py-2" placeholder="Search tools..." />
-                </div>
+                <SheetTitle className="px-3 py-5">Menu</SheetTitle>
                 <nav className="flex flex-col gap-1 pt-2">
                   {/* Auth section in mobile menu */}
                   {!isLoading && !user && (
@@ -183,7 +180,7 @@ export function Header() {
                       <Link
                         href="/register"
                         onClick={() => setMobileOpen(false)}
-                        className="rounded-md px-3 py-2 text-sm font-medium bg-primary text-primary-foreground hover:opacity-90 transition-colors text-center"
+                        className="mx-3 rounded-md px-3 py-2 text-sm font-medium bg-primary text-primary-foreground hover:opacity-90 transition-colors text-center"
                       >
                         Create account
                       </Link>
@@ -225,7 +222,7 @@ export function Header() {
                     href="/"
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                      "rounded-md mx-3 px-3 py-2 text-sm font-medium transition-colors",
                       pathname === "/"
                         ? "bg-accent text-accent-foreground"
                         : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"

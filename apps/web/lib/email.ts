@@ -19,7 +19,7 @@ export async function sendVerificationEmail(
 ): Promise<void> {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
   const verifyUrl = `${appUrl}/verify?token=${token}`;
-  const from = process.env.EMAIL_FROM || 'Kraaft <noreply@kraaft.dev>';
+  const from = process.env.EMAIL_FROM || 'Kraaft <kraaft.manieshsanwal@gmail.com>';
 
   const html = `
     <!DOCTYPE html>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "a2d51295-26a5-4c4f-bf33-84c98330b466",
+    "slug": "test-short-link",
+    "originalUrl": "https://example.com",
+    "clicks": 0,
+    "createdAt": "2026-04-21T10:24:22.460Z",
+    "updatedAt": "2026-04-21T10:24:22.460Z"
+  },
+  {
+    "id": "be0f905b-5b61-435a-84c3-c7cd63970a4d",
+    "slug": "test-short-link-2",
+    "originalUrl": "https://example.com",
+    "clicks": 5,
+    "createdAt": "2026-04-21T10:24:52.889Z",
+    "updatedAt": "2026-04-21T10:25:50.192Z"
+  }
+]

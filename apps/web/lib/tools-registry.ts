@@ -50,13 +50,13 @@ export const tools: Tool[] = [
   { slug: "date-add-subtract", name: "Date Add / Subtract", description: "Add or subtract days, months, years from a date", category: "calendar-date", tags: ["date", "add", "subtract", "calculator"], status: "live" },
 
   // ─── Link & URL Tools ──────────────────────────────────────
-  { slug: "url-shortener", name: "URL Shortener", description: "Shorten any URL for easy sharing", category: "link-url", tags: ["url", "short", "link"], isMostUsed: true, status: "coming-soon" },
+  { slug: "url-shortener", name: "URL Shortener", description: "Shorten any URL for easy sharing", category: "link-url", tags: ["url", "short", "link"], isMostUsed: true, status: "live", isNew: true },
   { slug: "qr-code-generator", name: "QR Code Generator", description: "Generate QR codes for any text or URL", category: "link-url", tags: ["qr", "code", "generator"], status: "live" },
   { slug: "utm-builder", name: "UTM Link Builder", description: "Build UTM-tagged campaign links", category: "link-url", tags: ["utm", "campaign", "marketing", "link"], status: "live" },
   { slug: "url-encode-decode", name: "URL Encoder / Decoder", description: "Encode or decode URL components", category: "link-url", tags: ["url", "encode", "decode"], status: "live" },
   { slug: "broken-link-checker", name: "Broken Link Checker", description: "Check for broken links on a webpage", category: "link-url", tags: ["broken", "link", "checker"], status: "live" },
   { slug: "og-preview", name: "OG Preview Checker", description: "Preview Open Graph tags for any URL", category: "link-url", tags: ["og", "opengraph", "preview", "meta"], status: "live" },
-  { slug: "link-protector", name: "Link Protector", description: "Add expiry or password protection to links", category: "link-url", tags: ["link", "password", "expiry", "protect"], status: "coming-soon" },
+  { slug: "link-protector", name: "Link Protector", description: "Add expiry or password protection to links", category: "link-url", tags: ["link", "password", "expiry", "protect"], status: "live", isNew: true },
 
   // ─── Image Tools ──────────────────────────────────────────
   { slug: "image-to-pdf", name: "Image to PDF", description: "Convert images to PDF documents", category: "image", tags: ["image", "pdf", "convert"], isMostUsed: true, status: "live" },
@@ -70,7 +70,9 @@ export const tools: Tool[] = [
   { slug: "bulk-image-renamer", name: "Bulk Image Renamer", description: "Rename multiple images at once", category: "image", tags: ["bulk", "rename", "image"], status: "live" },
   { slug: "exif-viewer", name: "EXIF Data Viewer", description: "View and remove EXIF metadata from images", category: "image", tags: ["exif", "metadata", "image", "privacy"], status: "live" },
   { slug: "reverse-image-search", name: "Reverse Image Search", description: "Find the source of any image", category: "image", tags: ["reverse", "image", "search"], status: "coming-soon" },
-  { slug: "image-to-text", name: "Image to Text (OCR)", description: "Extract text from images using OCR", category: "image", tags: ["ocr", "image", "text", "extract"], status: "coming-soon" },
+  { slug: "image-to-text", name: "Image to Text (OCR)", description: "Extract text from images using OCR", category: "image", tags: ["ocr", "image", "text", "extract"], status: "live", isNew: true },
+  { slug: "svg-to-png", name: "SVG to PNG Converter", description: "Convert SVG code or files to PNG images", category: "image", tags: ["svg", "png", "convert", "image"], status: "live", isNew: true },
+
 
   // ─── PDF Tools ──────────────────────────────────────────
   { slug: "pdf-merger", name: "PDF Merger", description: "Merge multiple PDF files into one", category: "pdf", tags: ["pdf", "merge", "combine"], status: "live" },
@@ -127,6 +129,9 @@ export const tools: Tool[] = [
   { slug: "find-replace", name: "Find & Replace", description: "Find and replace text with regex support", category: "text-writing", tags: ["find", "replace", "regex", "text"], status: "live" },
   { slug: "line-numbers", name: "Line Number Adder", description: "Add or remove line numbers from text", category: "text-writing", tags: ["line", "number", "add", "remove"], status: "live" },
   { slug: "whitespace-cleaner", name: "Whitespace Cleaner", description: "Clean up extra whitespace from text", category: "text-writing", tags: ["whitespace", "clean", "space", "trim"], status: "live" },
+  { slug: "ascii-art", name: "ASCII Art Generator", description: "Convert text into large ASCII art banners", category: "text-writing", tags: ["ascii", "art", "banner", "text"], status: "live", isNew: true },
+  { slug: "syllable-counter", name: "Syllable Counter", description: "Count syllables in your text accurately", category: "text-writing", tags: ["syllable", "count", "text", "meter"], status: "live", isNew: true },
+
 
   // ─── Developer Tools ──────────────────────────────────────────
   { slug: "json-formatter", name: "JSON Formatter", description: "Format and validate JSON data", category: "developer", tags: ["json", "format", "validate", "pretty"], isMostUsed: true, status: "live" },
@@ -144,6 +149,8 @@ export const tools: Tool[] = [
   { slug: "sql-formatter", name: "SQL Formatter", description: "Format and beautify SQL queries", category: "developer", tags: ["sql", "format", "beautify", "query"], status: "live" },
   { slug: "css-gradient-generator", name: "CSS Gradient Generator", description: "Create beautiful CSS gradients visually", category: "developer", tags: ["css", "gradient", "generator", "color"], status: "live" },
   { slug: "css-box-shadow", name: "CSS Box Shadow Generator", description: "Generate CSS box shadow code visually", category: "developer", tags: ["css", "shadow", "box", "generator"], status: "live" },
+  { slug: "text-to-binary-hex", name: "Text to Binary/Hex/Base64", description: "Convert text strings to various binary and hex formats", category: "developer", tags: ["text", "binary", "hex", "base64", "convert"], status: "live", isNew: true },
+
 
   // ─── Data & File Tools ──────────────────────────────────────
   { slug: "csv-to-json", name: "CSV to JSON", description: "Convert CSV and Excel files to JSON", category: "data-file", tags: ["csv", "excel", "json", "convert"], status: "live" },
@@ -153,6 +160,8 @@ export const tools: Tool[] = [
   { slug: "excel-to-pdf", name: "Excel to PDF", description: "Convert Excel files to PDF documents", category: "data-file", tags: ["excel", "pdf", "convert"], status: "coming-soon" },
   { slug: "csv-viewer", name: "CSV Viewer & Editor", description: "View and edit CSV files in the browser", category: "data-file", tags: ["csv", "viewer", "editor", "table"], status: "live" },
   { slug: "yaml-json-converter", name: "YAML ↔ JSON Converter", description: "Convert between YAML and JSON formats", category: "data-file", tags: ["yaml", "json", "convert"], status: "live" },
+  { slug: "csv-to-markdown", name: "CSV to Markdown Table", description: "Convert CSV data into a Markdown table format", category: "data-file", tags: ["csv", "markdown", "table", "convert"], status: "live", isNew: true },
+
 
   // ─── Design & Color Tools ──────────────────────────────────
   { slug: "color-palette", name: "Color Palette Generator", description: "Generate harmonious color palettes", category: "design-color", tags: ["color", "palette", "generate", "harmony"], status: "live" },
@@ -162,7 +171,7 @@ export const tools: Tool[] = [
   { slug: "favicon-generator", name: "Favicon Generator", description: "Generate favicons from images or text", category: "design-color", tags: ["favicon", "icon", "generator"], status: "live" },
   { slug: "border-radius-generator", name: "Border Radius Generator", description: "Generate CSS border radius visually", category: "design-color", tags: ["border", "radius", "css", "generator"], status: "live" },
   { slug: "font-pairing", name: "Font Pairing Suggester", description: "Get font pairing suggestions for your designs", category: "design-color", tags: ["font", "pairing", "typography", "suggest"], status: "live" },
-  { slug: "svg-optimizer", name: "SVG Optimizer", description: "Optimize and minify SVG files", category: "design-color", tags: ["svg", "optimize", "minify"], status: "coming-soon" },
+  { slug: "svg-optimizer", name: "SVG Optimizer", description: "Optimize and minify SVG files", category: "design-color", tags: ["svg", "optimize", "minify"], status: "live", isNew: true },
   { slug: "placeholder-image", name: "Placeholder Image Generator", description: "Generate placeholder images with custom sizes", category: "design-color", tags: ["placeholder", "image", "generator"], status: "live" },
   { slug: "device-mockup", name: "Device Frame Mockup", description: "Place screenshots in device frame mockups", category: "design-color", tags: ["device", "mockup", "frame", "screenshot"], status: "coming-soon" },
   { slug: "app-screenshot", name: "App Store Screenshot", description: "Generate app store screenshots", category: "design-color", tags: ["app", "store", "screenshot", "generator"], status: "coming-soon" },
@@ -178,9 +187,9 @@ export const tools: Tool[] = [
 
   // ─── Network & Web Diagnostic ──────────────────────────────
   { slug: "dns-lookup", name: "DNS Lookup", description: "Look up DNS records for any domain", category: "network-web", tags: ["dns", "lookup", "domain", "record"], status: "live" },
-  { slug: "whois-lookup", name: "WHOIS Lookup", description: "Look up WHOIS information for domains", category: "network-web", tags: ["whois", "domain", "lookup", "registration"], status: "coming-soon" },
+  { slug: "whois-lookup", name: "WHOIS Lookup", description: "Look up WHOIS information for domains", category: "network-web", tags: ["whois", "domain", "lookup", "registration"], status: "live", isNew: true },
   { slug: "ssl-checker", name: "SSL Certificate Checker", description: "Check SSL certificate details and validity", category: "network-web", tags: ["ssl", "certificate", "check", "https"], status: "coming-soon" },
-  { slug: "http-headers", name: "HTTP Header Checker", description: "View HTTP headers for any URL", category: "network-web", tags: ["http", "header", "check", "response"], status: "coming-soon" },
+  { slug: "http-headers", name: "HTTP Header Checker", description: "View HTTP headers for any URL", category: "network-web", tags: ["http", "header", "check", "response"], status: "live", isNew: true },
   { slug: "port-scanner", name: "Port Scanner", description: "Scan open ports on any domain", category: "network-web", tags: ["port", "scan", "network", "security"], status: "coming-soon" },
   { slug: "uptime-monitor", name: "Uptime Monitor", description: "Monitor website uptime and availability", category: "network-web", tags: ["uptime", "monitor", "website", "availability"], status: "coming-soon" },
   { slug: "ping-traceroute", name: "Ping & Traceroute", description: "Ping and trace route to any host", category: "network-web", tags: ["ping", "traceroute", "network", "latency"], status: "coming-soon" },
@@ -371,16 +380,18 @@ export const tools: Tool[] = [
   { slug: "random-picker", name: "Random Picker / Wheel", description: "Spin a wheel or pick randomly", category: "fun-viral", tags: ["random", "picker", "wheel", "spinner"], status: "live" },
   { slug: "would-you-rather", name: "Would You Rather", description: "Generate 'would you rather' questions", category: "fun-viral", tags: ["would", "you", "rather", "game", "fun"], status: "coming-soon" },
   { slug: "truth-or-dare", name: "Truth or Dare", description: "Generate truth or dare questions", category: "fun-viral", tags: ["truth", "dare", "game", "fun"], status: "live" },
+  { slug: "zalgo-text", name: "Zalgo Text Generator", description: "Generate glitchy Zalgo text", category: "fun-viral", tags: ["glitch", "zalgo", "text", "fun"], status: "live", isNew: true },
   { slug: "name-meaning", name: "Name Meaning Lookup", description: "Look up name meanings and origins", category: "fun-viral", tags: ["name", "meaning", "origin", "lookup"], status: "coming-soon" },
+
 
   // ─── Language & Translation ──────────────────────────────────
   { slug: "text-translator", name: "Text Translator", description: "Translate text between languages", category: "language-translation", tags: ["translate", "language", "text"], status: "coming-soon" },
   { slug: "language-detector", name: "Language Detector", description: "Detect the language of text", category: "language-translation", tags: ["language", "detect", "identify"], status: "coming-soon" },
   { slug: "morse-code", name: "Morse Code Converter", description: "Encode and decode Morse code", category: "language-translation", tags: ["morse", "code", "encode", "decode"], status: "live" },
   { slug: "braille-converter", name: "Braille Converter", description: "Convert text to Braille", category: "language-translation", tags: ["braille", "convert", "accessibility"], status: "live" },
-  { slug: "emoji-to-text", name: "Emoji to Text", description: "Convert emojis to text descriptions", category: "language-translation", tags: ["emoji", "text", "convert"], status: "coming-soon" },
+  { slug: "emoji-to-text", name: "Emoji to Text", description: "Convert emojis to text descriptions", category: "language-translation", tags: ["emoji", "text", "convert"], status: "live" },
   { slug: "text-to-speech", name: "Text to Speech", description: "Convert text to speech online", category: "language-translation", tags: ["tts", "text", "speech", "audio"], status: "live" },
-  { slug: "phonetic-alphabet", name: "Phonetic Alphabet", description: "Convert text to NATO phonetic alphabet", category: "language-translation", tags: ["phonetic", "nato", "alphabet", "convert"], status: "coming-soon" },
+  { slug: "phonetic-alphabet", name: "Phonetic Alphabet", description: "Convert text to NATO phonetic alphabet", category: "language-translation", tags: ["phonetic", "nato", "alphabet", "convert"], status: "live" },
 
   // ─── General Productivity ──────────────────────────────────
   { slug: "online-notepad", name: "Online Notepad", description: "Simple online notepad and scratchpad", category: "general-productivity", tags: ["notepad", "notes", "scratchpad", "text"], status: "live" },

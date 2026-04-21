@@ -205,6 +205,25 @@ import { DecisionMakerTool } from "@/components/tools/general/decision-maker-too
 import { MacroCalculatorTool } from "@/components/tools/health/macro-calculator-tool";
 import { SleepScheduleTool } from "@/components/tools/health/sleep-schedule-tool";
 
+// Batch 13 Imports
+import { PhoneticAlphabetTool } from "@/components/tools/language/phonetic-alphabet-tool";
+import { EmojiToTextTool } from "@/components/tools/language/emoji-to-text-tool";
+import { AsciiArtTool } from "@/components/tools/text-writing/ascii-art-tool";
+import { SyllableCounterTool } from "@/components/tools/text-writing/syllable-counter-tool";
+import { ZalgoTextTool } from "@/components/tools/fun-viral/zalgo-text-tool";
+import { TextToBinaryHexTool } from "@/components/tools/developer/text-to-binary-hex-tool";
+import { CsvToMarkdownTool } from "@/components/tools/data-file/csv-to-markdown-tool";
+import { SvgToPngTool } from "@/components/tools/image/svg-to-png-tool";
+import { ImageToTextTool } from "@/components/tools/image/image-to-text-tool";
+
+// Batch 14 Imports
+import { UrlShortenerTool } from "@/components/tools/link-url/url-shortener-tool";
+import { LinkProtectorTool } from "@/components/tools/link-url/link-protector-tool";
+import { SvgOptimizerTool } from "@/components/tools/design/svg-optimizer-tool";
+import { WhoisLookupTool } from "@/components/tools/network/whois-lookup-tool";
+import { HttpHeaderTool } from "@/components/tools/network/http-header-tool";
+
+
 // Mapping of category -> tool slug -> component
 const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
   "pdf": {
@@ -223,7 +242,9 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "yaml-json-converter": YamlJsonConverterTool,
     "file-checksum": FileChecksumTool,
     "zip-compressor": ZipCompressorTool,
+    "csv-to-markdown": CsvToMarkdownTool,
   },
+
   "text-writing": {
     "word-counter": WordCounterTool,
     "case-converter": CaseConverterTool,
@@ -237,7 +258,10 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "find-replace": FindReplaceTool,
     "line-numbers": LineNumbersTool,
     "whitespace-cleaner": WhitespaceCleanerTool,
+    "ascii-art": AsciiArtTool,
+    "syllable-counter": SyllableCounterTool,
   },
+
   "developer": {
     "json-formatter": JsonFormatterTool,
     "base64-encoder": Base64EncoderTool,
@@ -254,7 +278,9 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "xml-json-converter": XmlJsonConverterTool,
     "html-css-js-minifier": CodeMinifierTool,
     "api-formatter": ApiFormatterTool,
+    "text-to-binary-hex": TextToBinaryHexTool,
   },
+
   "converters-calculators": {
     "unit-converter": UnitConverterTool,
     "currency-converter": CurrencyConverterTool,
@@ -276,6 +302,8 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "utm-builder": UtmBuilderTool,
     "broken-link-checker": BrokenLinkCheckerTool,
     "og-preview": OgPreviewTool,
+    "url-shortener": UrlShortenerTool,
+    "link-protector": LinkProtectorTool,
   },
   "security-privacy": {
     "password-generator": PasswordGeneratorTool,
@@ -294,6 +322,7 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "favicon-generator": FaviconGeneratorTool,
     "placeholder-image": PlaceholderImageTool,
     "font-pairing": FontPairingTool,
+    "svg-optimizer": SvgOptimizerTool,
   },
   "clock-time": {
     "stopwatch": StopwatchTool,
@@ -359,6 +388,8 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "pdf-compressor": PdfCompressorTool,
     "bulk-image-renamer": BulkImageRenamerTool,
     "exif-viewer": ExifViewerTool,
+    "svg-to-png": SvgToPngTool,
+    "image-to-text": ImageToTextTool,
   },
   "general-productivity": {
     "online-notepad": OnlineNotepadTool,
@@ -399,7 +430,10 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "text-to-speech": TextToSpeechTool,
     "morse-code": MorseCodeTool,
     "braille-converter": BrailleConverterTool,
+    "phonetic-alphabet": PhoneticAlphabetTool,
+    "emoji-to-text": EmojiToTextTool,
   },
+
   "ecommerce-seller": {
     "barcode-generator": BarcodeGeneratorTool,
   },
@@ -409,6 +443,8 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
   "network-web": {
     "my-ip": MyIpTool,
     "dns-lookup": DnsLookupTool,
+    "whois-lookup": WhoisLookupTool,
+    "http-headers": HttpHeaderTool,
   },
   "food-cooking": {
     "recipe-converter": RecipeConverterTool,
@@ -426,7 +462,9 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
     "truth-or-dare": TruthOrDareTool,
     "username-generator": UsernameGeneratorTool,
     "fake-tweet-maker": FakeTweetMakerTool,
+    "zalgo-text": ZalgoTextTool,
   },
+
   "video-audio-download": {
     "youtube-thumbnail": YoutubeThumbnailTool,
   },
@@ -455,7 +493,8 @@ export async function generateMetadata({
 
   if (!toolData || !cat) return {};
 
-  const fullDescription = `${toolData.description}. Free online ${toolData.name.toLowerCase()} tool — no signup required. Works in your browser on kraaft.`;
+  const toolName = toolData.name || "utility";
+  const fullDescription = `${toolData.description}. Free online ${toolName.toLowerCase()} tool — no signup required. Works in your browser on kraaft.`;
 
   return {
     title: `${toolData.name} — Free Online Tool`,

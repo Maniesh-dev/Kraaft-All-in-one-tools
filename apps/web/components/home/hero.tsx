@@ -51,7 +51,7 @@ export function Hero() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-10">
+      <section className="relative overflow-hidden z-10 pt-10">
         {/* Background gradient orbs and floating elements */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
