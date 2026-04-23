@@ -116,7 +116,7 @@ export function Hero() {
           <motion.div variants={itemVariants} className="mb-8 flex flex-col items-center gap-4">
             <div className="inline-flex items-center gap-2.5 rounded-full border border-yellow-500/20 bg-yellow-500/5 px-4 py-1.5 text-sm backdrop-blur-sm transition-colors hover:bg-yellow-500/10 cursor-default">
               <span className="text-yellow-500 text-[10px] tracking-widest drop-shadow-sm">★★★★★</span>
-              <span className="text-xs font-medium text-muted-foreground">Used by 10,000+ creators, devs &amp; marketers etc..</span>
+              <span className="text-xs font-medium text-muted-foreground">Used by 1000+ creators, devs &amp; marketers etc..</span>
             </div>
 
             <Badge variant="secondary" className="px-6 py-3 text-xs font-medium shadow-sm">

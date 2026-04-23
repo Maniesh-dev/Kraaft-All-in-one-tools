@@ -92,7 +92,7 @@ export function StepsConverterTool() {
                   style={{ width: `${Math.min(100, (results.steps / 10000) * 100)}%` }}
                 />
               </div>
-              <p className="text-xs text-muted-foreground text-center">Based on 10,000 steps/day goal</p>
+              <p className="text-xs text-muted-foreground text-center">Based on 1000 steps/day goal</p>
             </div>
           )}
 
