@@ -222,6 +222,7 @@ import { LinkProtectorTool } from "@/components/tools/link-url/link-protector-to
 import { SvgOptimizerTool } from "@/components/tools/design/svg-optimizer-tool";
 import { WhoisLookupTool } from "@/components/tools/network/whois-lookup-tool";
 import { HttpHeaderTool } from "@/components/tools/network/http-header-tool";
+import { InstagramDownloaderTool } from "@/components/tools/video-audio-download/instagram-downloader-tool";
 
 
 // Mapping of category -> tool slug -> component
@@ -467,6 +468,7 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
 
   "video-audio-download": {
     "youtube-thumbnail": YoutubeThumbnailTool,
+    "instagram-downloader": InstagramDownloaderTool,
   },
   "video-editing": {
     "screen-recorder": ScreenRecorderTool,
