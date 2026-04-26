@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import * as Icons from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import {
   Breadcrumb,
@@ -223,7 +224,12 @@ import { SvgOptimizerTool } from "@/components/tools/design/svg-optimizer-tool";
 import { WhoisLookupTool } from "@/components/tools/network/whois-lookup-tool";
 import { HttpHeaderTool } from "@/components/tools/network/http-header-tool";
 import { InstagramDownloaderTool } from "@/components/tools/video-audio-download/instagram-downloader-tool";
-
+import { TiktokDownloaderTool } from "@/components/tools/video-audio-download/tiktok-downloader-tool";
+import { FacebookDownloaderTool } from "@/components/tools/video-audio-download/facebook-downloader-tool";
+import { TwitterDownloaderTool } from "@/components/tools/video-audio-download/twitter-downloader-tool";
+import { RedditDownloaderTool } from "@/components/tools/video-audio-download/reddit-downloader-tool";
+import { PinterestDownloaderTool } from "@/components/tools/video-audio-download/pinterest-downloader-tool";
+import { DailymotionVimeoDownloaderTool } from "@/components/tools/video-audio-download/dailymotion-vimeo-downloader-tool";
 
 // Mapping of category -> tool slug -> component
 const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
@@ -469,6 +475,12 @@ const TOOL_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
   "video-audio-download": {
     "youtube-thumbnail": YoutubeThumbnailTool,
     "instagram-downloader": InstagramDownloaderTool,
+    "tiktok-downloader": TiktokDownloaderTool,
+    "facebook-downloader": FacebookDownloaderTool,
+    "twitter-downloader": TwitterDownloaderTool,
+    "reddit-downloader": RedditDownloaderTool,
+    "pinterest-downloader": PinterestDownloaderTool,
+    "dailymotion-downloader": DailymotionVimeoDownloaderTool,
   },
   "video-editing": {
     "screen-recorder": ScreenRecorderTool,
@@ -541,7 +553,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
     offers: {
       "@type": "Offer",
       price: "0",
-      priceCurrency: "USD",
+      priceCurrency: "INR",
     },
     isPartOf: {
       "@type": "WebSite",
@@ -587,7 +599,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
           {/* Tool header */}
           <div className="mb-8">
             <div className="flex items-start gap-4">
-              <span className="text-4xl">{cat.emoji}</span>
+              <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary shrink-0 shadow-sm border border-primary/10">
+                {(() => {
+                  const Icon = (Icons as any)[toolData.icon || "Wrench"] || Icons.Wrench;
+                  return <Icon className="h-8 w-8" weight="duotone" />;
+                })()}
+              </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap justify-between">
                   <h1 className="font-heading text-2xl font-bold sm:text-3xl">
