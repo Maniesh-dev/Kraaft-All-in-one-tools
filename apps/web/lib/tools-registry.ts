@@ -88,7 +88,7 @@ export const tools: Tool[] = [
   // ─── Video & Audio Download ──────────────────────────────────
   { slug: "youtube-downloader", name: "YouTube Downloader", description: "Download YouTube videos in multiple formats", category: "video-audio-download", tags: ["youtube", "video", "download"], status: "coming-soon" },
   { slug: "youtube-thumbnail", name: "YouTube Thumbnail", description: "Download YouTube video thumbnails", category: "video-audio-download", tags: ["youtube", "thumbnail", "download"], status: "live" },
-  { slug: "instagram-downloader", name: "Instagram Downloader", description: "Download Instagram videos and reels", category: "video-audio-download", tags: ["instagram", "video", "reel", "download"], status: "coming-soon" },
+  { slug: "instagram-downloader", name: "Instagram Downloader", description: "Download Instagram videos and reels", category: "video-audio-download", tags: ["instagram", "video", "reel", "download"], status: "live", isNew: true },
   { slug: "tiktok-downloader", name: "TikTok Downloader", description: "Download TikTok videos without watermark", category: "video-audio-download", tags: ["tiktok", "video", "download", "watermark"], status: "coming-soon" },
   { slug: "facebook-downloader", name: "Facebook Downloader", description: "Download Facebook videos", category: "video-audio-download", tags: ["facebook", "video", "download"], status: "coming-soon" },
   { slug: "twitter-downloader", name: "Twitter/X Downloader", description: "Download Twitter/X videos", category: "video-audio-download", tags: ["twitter", "x", "video", "download"], status: "coming-soon" },
